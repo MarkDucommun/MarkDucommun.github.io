@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Mothers Day</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Lobster|Rokkitt' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div id='banner'>
+      <h1 id='banner-text'>Happy Mothers Day</h1>
+    </div>
+    <img id='dog' src='http://i.imgur.com/KOu2Ycf.jpg' />
+  </body>
+
+  <style type="text/css" media="screen">
+    body {
+      background-image: url(http://subtlepatterns.com/patterns/creampaper.png);
+    }
+    h1 {
+      text-align: center;
+      font-size: 5em;
+      font-family: 'Lobster', cursive;
+      color: rgba(192, 57, 43, 1);
+      padding: 0.5em 1em 0.5em 1em;
+      margin: 0;
+    }
+    #banner {
+      padding-top: 1em;
+      margin: 0;    }
+    img {
+      width: 50%;
+      margin-left: 25%;
+      margin-right: auto;
+    }
+  </style>
+
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      var bannerText = $('#banner-text');
+      var dog = $('#dog');
+      var on_hover = function() {
+        if(bannerText.text() == 'Happy Mothers Day'){
+          bannerText.text('You Have A Weird Dog');
+          setTimeout(function() {
+            bannerText.text('Love, Mark');
+            setTimeout(function() {
+              bannerText.text('Happy Mothers Day')
+            }, 5000);
+          }, 2000);
+        }else{
+          console.log('Nothing');
+        }
+      };
+      dog.hover(on_hover);
+    });
+  </script>
+</html>
