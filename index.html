@@ -38,7 +38,7 @@
     $(document).ready(function() {
       var bannerText = $('#banner-text');
       var dog = $('#dog');
-      var on_hover = function() {
+      var changeText = function() {
         if(bannerText.text() == 'Happy Mothers Day'){
           bannerText.text('You Have A Weird Dog');
           setTimeout(function() {
@@ -51,7 +51,8 @@
           console.log('Nothing');
         }
       };
-      dog.hover(on_hover);
+      dog.hover(changeText);
+      dog.click(changeText);
     });
   </script>
 </html>
